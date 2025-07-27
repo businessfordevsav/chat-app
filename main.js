@@ -47,7 +47,7 @@ function connectSocket(token) {
     partnerId = data.partnerId;
     document.getElementById(
       "status"
-    ).innerText = `🎯 Matched with ${partnerId}`;
+    ).innerText = `🎯 Matched successfully`;
   });
 
   socket.on("receive_message", renderMessage);

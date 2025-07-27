@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anon Chat</title>
+    <script defer src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script defer src="main.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      #chatBox {
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        height: 300px;
+        flex-direction: column;
+        display: flex;
+        overflow-y: auto;
+      }
+      .own-message {
+        text-align: right;
+      }
+      .partner-message {
+        text-align: left;
+      }
+      .message {
+        margin: 5px 0;
+      }
+      button.edit-btn,
+      button.delete-btn {
+        margin-left: 5px;
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Anonymous Chat</h1>
+
+    <div id="loginSection">
+      <input type="text" id="uidInput" placeholder="Enter UID" />
+      <input type="text" id="nicknameInput" placeholder="Enter Nickname" />
+      <button id="loginBtn">Login</button>
+    </div>
+
+    <div id="chatSection" style="display: none">
+      <span id="nicknameDisplay"></span>
+      <div id="status">Waiting...</div>
+      <div id="chatBox"></div>
+      <input type="text" id="messageInput" placeholder="Type a message" />
+      <input type="file" id="fileInput" />
+      <button id="sendBtn">Send</button>
+      <button id="findBtn">Find Stranger</button>
+    </div>
+  </body>
+</html>

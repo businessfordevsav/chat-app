@@ -1,5 +1,5 @@
 const API_URL =
-  /* 'https://anonymous-chat-backend-rd63.onrender.com' */ "http://localhost:3000";
+   'https://anonymous-chat-backend-rd63.onrender.com' /* "http://localhost:3000" */;
 let socket = null;
 let room = null;
 let partnerId = null;
